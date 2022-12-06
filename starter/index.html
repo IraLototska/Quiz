@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en-gb">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Coding Quiz</title>
+
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+  </head>
+
+  <body>
+    <div class="scores"><a href="highscores.html">View Highscores</a></div>
+
+    <div class="timer">Time: <span id="time">50</span></div>
+
+    <div class="wrapper">
+      <div id="start-screen" class="start">
+        <h1>Coding Quiz Challenge</h1>
+        <p>
+          Try to answer the following code-related questions within the time
+          limit. Keep in mind that incorrect answers will penalize your
+          score/time by ten seconds!
+        </p>
+        <main id="question-wrap">
+          <div id="question0">
+              <h3>Inside which HTML element do we put the JavaScript?</h3>
+        <ul>
+          <li><button id="answer" onclick="soundClick()">html</button></li>
+          <li><button id="answer" onclick="soundClick()">javascript</button></li>
+          <li><button id="answer" onclick="soundCorrect()">script</button></li>
+          <li><button id="answer" onclick="soundClick()">JavaScript</button></li>
+        </ul>
+        </div>
+
+           <div id="question1">
+            <h3>How do you write 'Favorite color' in an alert box?</h3>
+      <ul>
+        <li><button id="answer" onclick="soundCorrect()">alert('Favorite color');</button></li>
+        <li><button id="answer" onclick="soundClick()">alertBox = Favorite color;</button></li>
+        <li><button id="answer" onclick="soundClick()">Box(alert.'Favorite color');</button></li>
+        <li><button id="answer" onclick="soundClick()">showText('Favorite color');</button></li>
+      </ul>
+         </div>
+        
+         <div id="question2">
+          <h3>How to write an IF statement in JavaScript?</h3>
+    <ul>
+      <li><button id="answer" onclick="soundClick()">if the condition = then the consequence</button></li>
+      <li><button id="answer" onclick="soundCorrect()">if (i == 0)</button></li>
+      <li><button id="answer" onclick="soundClick()" >if this is my condition</button></li>
+      <li><button id="answer" onclick="soundClick()">if i = 0, then</button></li>
+    </ul>
+       </div>
+
+       <div id="question3">
+        <h3>How can you add a comment in a JavaScript?</h3>
+  <ul>
+    <li><button id="answer" onclick="soundClick()">(my comment</button></li>
+    <li><button id="answer" onclick="soundClick()">'comment'</button></li>
+    <li><button id="answer" onclick="soundCorrect()">//my comment</button></li>
+    <li><button id="answer" onclick="soundClick()"> /comment/</button></li>
+  </ul>
+     </div>
+
+     <div id="question4">
+      <h3>What is the correct way to write a JavaScript array?</h3>
+<ul>
+  <li><button id="answer" onclick="soundClick()">var num = (2, 3, 4, 5)</button></li>
+    <li><button id="answer" onclick="soundClick()">var hobby = {music/theatre/sport/cinema}</button></li>
+    <li><button id="answer" onclick="soundClick()">var letters = //a; b; c; d//</button></li>
+    <li><button id="answer" onclick="soundCorrect()">var colors = ['red', 'green', 'blue', 'white']</button></li>
+</ul>
+   </div>
+      </main>
+        <button id="start" >Start Quiz</button>
+
+
+</script>
+      </div>
+
+      <div id="questions" class="hide">
+        <h2 id="question-title"></h2>
+        <div id="choices" class="choices"></div>
+      </div>
+
+      <div id="end-screen" class="hide">
+        <h2>All done!</h2>
+        <p>Your final score is <span id="final-score"></span>.</p>
+        <p>
+          Enter initials: <input type="text" id="initials" max="3" />
+          <button id="submit">Submit</button>
+        </p>
+      </div>
+
+      <div id="feedback" class="feedback hide"></div>
+    </div>
+
+    <script src="./assets/js/questions.js"></script>
+    <script src="./assets/js/logic.js"></script>
+  </body>
+</html>
